@@ -10,7 +10,7 @@ class Build(DistutilsBuild):
     def run(self):
         cores_to_use = max(1, multiprocessing.cpu_count()-1)
         try:
-            subprocess.check_call(['git', 'clone', 'git@github.com:LARG/HFO.git', 'hfo_py'])
+            subprocess.check_call(['git', 'clone', 'https://github.com/LARG/HFO.git', 'hfo_py'])
             subprocess.check_call(['cmake','-DCMAKE_BUILD_TYPE=Release'], cwd='hfo_py')
             subprocess.check_call(['make', 'install', '-j', str(cores_to_use)], cwd='hfo_py')
         except subprocess.CalledProcessError as e:
