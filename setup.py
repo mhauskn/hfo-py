@@ -22,7 +22,7 @@ if not os.path.exists('hfo_py'):
     os.makedirs('hfo_py')
 
 setup(name='hfo-py',
-      version='0.1',
+      version='0.2',
       author='Matthew Hausknecht',
       author_email='matthew.hausknecht@gmail.com',
       description='Half Field Offense in 2D RoboCup Soccer.',
